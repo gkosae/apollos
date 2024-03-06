@@ -1,0 +1,7 @@
+select
+	lsn.id as value,
+	concat_ws(' - ', concat_ws(' ', kls.code, lsn.number), lsn.name) as label
+from
+	lessons lsn
+	inner join klasses kls on lsn.klass_id = kls.id
+order by kls.number ASC, lsn.number ASC

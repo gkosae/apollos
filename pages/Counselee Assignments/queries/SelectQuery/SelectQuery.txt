@@ -1,0 +1,29 @@
+select
+	cca.id,
+	cle.id as counselee_id,
+	cle.first_name as counselee_first_name,
+	cle.last_name as counselee_last_name,
+	cle.other_names as counselee_other_names,
+	cle.contact as counselee_contact,
+	cle.alternate_contact as counselee_alternate_contact,
+	cle.location as counselee_location,
+	cle.picture_url as counselee_picture_url,
+	csl.id as counselor_id,
+	csl.first_name as counselor_first_name,
+	csl.last_name as counselor_last_name,
+	csl.title as counselor_title,
+	csl.contact as counselor_contact,
+	csl.location as counselor_location
+from
+	counselor_counselee_assignments cca
+inner join counselors csl on
+	cca.counselor_id = csl.id
+inner join counselees cle on
+	cca.counselee_id = cle.id
+order by
+	csl.first_name asc,
+	csl.last_name asc,
+	cle.joined_at desc,
+	cle.first_name asc
+LIMIT {{data_table.pageSize}}
+OFFSET {{(data_table.pageNo - 1) * data_table.pageSize}};

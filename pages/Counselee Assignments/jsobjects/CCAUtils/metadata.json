@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "CCAUtils",
+    "pageId": "Counselee Assignments",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Counselee Assignments_CCAUtils",
+  "deleted": false,
+  "gitSyncId": "65dbe53b0d28a7464dd18987_65e722347af9b62b7feda558"
+}

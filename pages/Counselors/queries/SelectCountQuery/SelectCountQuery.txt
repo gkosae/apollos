@@ -1,0 +1,1 @@
+select count(id) as cnt from counselors where is_archived=false;

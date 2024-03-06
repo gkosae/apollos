@@ -1,0 +1,5 @@
+SELECT * FROM public."klasses"
+WHERE "name" ilike '%{{data_table.searchText || ""}}%' AND is_archived=false
+ORDER BY number ASC
+LIMIT {{data_table.pageSize}}
+OFFSET {{(data_table.pageNo - 1) * data_table.pageSize}};

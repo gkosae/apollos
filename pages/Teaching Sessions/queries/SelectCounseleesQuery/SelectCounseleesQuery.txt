@@ -1,0 +1,8 @@
+select
+	id as value,
+	concat_ws(' ', first_name, last_name) as label
+from
+	counselees
+order by
+	first_name asc,
+	last_name asc

@@ -1,0 +1,12 @@
+INSERT INTO public."klasses" (
+	"name",
+	"code",
+	"number",
+	"created_at",
+	"updated_at")
+VALUES (
+	'{{insert_form.formData.name}}',
+	'{{insert_form.formData.code}}',
+	'{{insert_form.formData.number}}',
+	CURRENT_TIMESTAMP,
+	CURRENT_TIMESTAMP);

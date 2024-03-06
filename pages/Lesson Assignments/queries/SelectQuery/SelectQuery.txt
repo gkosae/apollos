@@ -1,0 +1,22 @@
+SELECT
+    cla.id as id,
+		cla.is_main_counselor_for_lesson as is_main_counselor_for_lesson,
+    kls.code as class_code,
+    kls.number as class_number,
+		lsn.id as lesson_id,
+    lsn.number as lesson_number,
+    lsn.name as lesson_name,
+		csl.id as counselor_id,
+    csl.title as counselor_title,
+    csl.first_name as counselor_first_name,
+    csl.last_name as counselor_last_name
+FROM
+    counselor_lesson_assignments cla
+    INNER JOIN lessons lsn on lsn.id = cla.lesson_id
+    INNER JOIN counselors csl on csl.id = cla.counselor_id
+    INNER JOIN klasses kls on kls.id = lsn.klass_id
+ORDER BY
+    kls.number ASC,
+    lsn.number ASC
+LIMIT {{data_table.pageSize}}
+OFFSET {{(data_table.pageNo - 1) * data_table.pageSize}};

@@ -1,0 +1,18 @@
+INSERT INTO public."counselors" (
+	"first_name",
+	"last_name",
+	"title",
+	"contact",
+	"alternate_contact",
+	"location",
+	"created_at",
+	"updated_at")
+VALUES (
+	'{{insert_form.formData.first_name}}',
+	'{{insert_form.formData.last_name}}',
+	'{{insert_form.formData.title}}',
+	'{{insert_form.formData.contact}}',
+	'{{insert_form.formData.alternate_contact}}',
+	'{{insert_form.formData.location}}',
+	CURRENT_TIMESTAMP,
+	CURRENT_TIMESTAMP);

@@ -1,0 +1,12 @@
+INSERT INTO public."counselor_counselee_assignments" (
+	"counselor_id",
+	"counselee_id",
+	"created_at",
+	"updated_at"
+)
+VALUES (
+	'{{NewCounselorSelect.selectedOptionValue}}',
+	'{{NewCounseleeSelect.selectedOptionValue}}',
+	CURRENT_TIMESTAMP,
+	CURRENT_TIMESTAMP
+);

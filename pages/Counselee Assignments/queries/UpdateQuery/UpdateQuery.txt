@@ -1,0 +1,5 @@
+UPDATE counselor_counselee_assignments SET
+		counselee_id = {{data_table.selectedRow.counselee_id}},
+		counselor_id = {{UpdateForm.data.CounselorSelect}},
+		updated_at = CURRENT_TIMESTAMP
+WHERE id = {{data_table.selectedRow.id}};

@@ -1,0 +1,9 @@
+UPDATE public."counselors" SET
+		"first_name" = '{{update_form.fieldState.first_name.isVisible ? update_form.formData.first_name : update_form.sourceData.first_name}}',
+		"last_name" = '{{update_form.fieldState.last_name.isVisible ? update_form.formData.last_name : update_form.sourceData.last_name}}',
+    "title" = '{{update_form.fieldState.title.isVisible ? update_form.formData.title : update_form.sourceData.title}}',
+		"contact" = '{{update_form.fieldState.contact.isVisible ? update_form.formData.contact : update_form.sourceData.contact}}',
+		"alternate_contact" = '{{update_form.fieldState.alternate_contact.isVisible ? update_form.formData.alternate_contact : update_form.sourceData.alternate_contact}}',
+			"location" = '{{update_form.fieldState.location.isVisible ? update_form.formData.location : update_form.sourceData.location}}',
+		"updated_at" = CURRENT_TIMESTAMP
+WHERE "id" = {{data_table.selectedRow.id}};

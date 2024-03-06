@@ -1,0 +1,7 @@
+UPDATE public."teaching_sessions" SET
+		"lesson_id" = '{{update_form.formData.Lesson}}',
+    	"counselor_id" = '{{update_form.formData.Counselor}}',
+		"counselee_id" = '{{update_form.formData.Counselee}}',
+		"taught_at" = '{{update_form.formData.DateTaught}}',
+		"updated_at" = CURRENT_TIMESTAMP
+WHERE "id" = {{data_table.selectedRow.id}};

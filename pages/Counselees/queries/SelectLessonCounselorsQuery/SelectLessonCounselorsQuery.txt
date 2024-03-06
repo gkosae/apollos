@@ -1,0 +1,13 @@
+select 
+	lsn.id as lesson_id,
+	cls.id as counselor_id,
+	cla.is_main_counselor_for_lesson as is_main_counselor_for_lesson
+from
+	lessons lsn
+left join counselor_lesson_assignments cla on
+	cla.lesson_id = lsn.id
+left join counselors cls on
+	cla.counselor_id = cls.id
+order by
+	lsn.id ASC,
+	is_main_counselor_for_lesson DESC

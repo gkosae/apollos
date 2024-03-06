@@ -1,0 +1,15 @@
+insert into teaching_sessions (
+	lesson_id,
+	counselor_id,
+	counselee_id,
+	taught_at,
+	created_at,
+	updated_at
+) VALUES (
+	{{NextLessonForm.data.NextLessonLessonSelect}},
+	{{NextLessonForm.data.NextLessonCounselorSelect}},
+	{{data_table.triggeredRow.id}},
+	{{NextLessonForm.data.NextLessonDatePicker}},
+	CURRENT_TIMESTAMP,
+	CURRENT_TIMESTAMP
+);

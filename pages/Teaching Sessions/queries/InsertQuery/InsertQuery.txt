@@ -1,0 +1,15 @@
+INSERT INTO public."teaching_sessions" (
+	"lesson_id",
+	"counselor_id",
+	"counselee_id",
+	"taught_at",
+	"created_at",
+	"updated_at")
+VALUES (
+	'{{insert_form.formData.Lesson}}',
+	'{{insert_form.formData.Counselor}}',
+	'{{insert_form.formData.Counselee}}',
+	'{{insert_form.formData.DateTaught}}',
+	CURRENT_TIMESTAMP,
+	CURRENT_TIMESTAMP
+);

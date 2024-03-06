@@ -1,0 +1,1 @@
+UPDATE counselees SET is_archived=true WHERE "id" = {{data_table.triggeredRow.id}};

@@ -1,0 +1,5 @@
+SELECT * FROM public."counselors"
+WHERE "first_name" ilike '%{{data_table.searchText || ""}}%' AND is_archived=false
+ORDER BY title asc, first_name asc, last_name asc
+LIMIT {{data_table.pageSize}}
+OFFSET {{(data_table.pageNo - 1) * data_table.pageSize}};

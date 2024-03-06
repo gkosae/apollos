@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "TCSUtils",
+    "pageId": "Teaching Sessions",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Teaching Sessions_TCSUtils",
+  "deleted": false,
+  "gitSyncId": "65dbe53b0d28a7464dd18987_65e607142e25490036bbbb83"
+}

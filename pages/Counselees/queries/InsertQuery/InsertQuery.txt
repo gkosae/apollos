@@ -1,0 +1,32 @@
+INSERT INTO public."counselees" (
+	"picture_url",
+	"first_name",
+	"last_name",
+	"other_names",
+	"contact",
+	"alternate_contact",
+	"location",
+	"location_description",
+	"next_lesson_id",
+	"invited_by",
+	"joined_at",
+	"last_seen_at",
+	"created_at",
+	"updated_at"
+)
+VALUES (
+	COALESCE('{{this.params.pictureUrl}}', ''),
+	'{{InsertForm.data.NewFirstNameInput}}',
+	'{{InsertForm.data.NewLastNameInput}}',
+	'{{InsertForm.data.NewOtherNamesInput}}',
+	'{{InsertForm.data.NewContactPhoneInput}}',
+	'{{InsertForm.data.NewAltContactInput}}',
+	'{{InsertForm.data.NewLocationInput}}',
+	'{{InsertForm.data.NewLocationDescriptionInput}}',
+	'{{InsertForm.data.NewNextLessonSelect}}',
+	'{{InsertForm.data.NewInvitedByInput}}',
+	'{{InsertForm.data.NewJoinedDatePicker}}',
+	'{{InsertForm.data.NewJoinedDatePicker}}',
+	CURRENT_TIMESTAMP,
+	CURRENT_TIMESTAMP
+);

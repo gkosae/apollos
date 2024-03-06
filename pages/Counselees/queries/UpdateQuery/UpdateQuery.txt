@@ -1,0 +1,14 @@
+UPDATE public."counselees" SET
+    "picture_url" = '{{this.params.pictureUrl}}',
+		"first_name" = '{{UpdateForm.data.FirstNameInput}}',
+    "last_name" = '{{UpdateForm.data.LastNameInput}}',
+		"other_names" = '{{UpdateForm.data.OtherNamesInput}}',
+		"contact" = '{{UpdateForm.data.ContactPhoneInput}}',
+		"alternate_contact" = '{{UpdateForm.data.AltContactPhoneInput}}',
+		"next_lesson_id" = '{{UpdateForm.data.NextLessonSelect}}',
+		"location" = '{{UpdateForm.data.LocationInput}}',
+		"location_description" = '{{UpdateForm.data.LocationDescriptionInput}}',
+		"invited_by" = '{{UpdateForm.data.InvitedByInput}}',
+		"joined_at" = '{{UpdateForm.data.JoinedDatePicker}}',
+		"updated_at" = CURRENT_TIMESTAMP
+	WHERE "id" = {{data_table.selectedRow.id}};

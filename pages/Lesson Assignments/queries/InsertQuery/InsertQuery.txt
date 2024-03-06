@@ -1,0 +1,14 @@
+INSERT INTO public."counselor_lesson_assignments" (
+	"counselor_id",
+	"lesson_id",
+	"is_main_counselor_for_lesson",
+	"created_at",
+	"updated_at"
+)
+VALUES (
+	'{{InsertForm.formData.Counselor}}',
+	'{{InsertForm.formData.Lesson}}',
+	'{{InsertForm.formData.isMainCounselorForLesson}}',
+	CURRENT_TIMESTAMP,
+	CURRENT_TIMESTAMP
+);

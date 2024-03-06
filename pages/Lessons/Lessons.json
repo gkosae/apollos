@@ -1,0 +1,82 @@
+{
+  "unpublishedPage": {
+    "name": "Lessons",
+    "slug": "lessons",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 1174,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 860,
+          "containerStyle": "none",
+          "snapRows": 125,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 89,
+          "minHeight": 900,
+          "parentColumnSpace": 1,
+          "dynamicTriggerPathList": [],
+          "dynamicBindingPathList": [],
+          "leftColumn": 0
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Lessons_SelectClassesQuery",
+              "name": "SelectClassesQuery",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Lessons_SelectQuery",
+              "name": "SelectQuery",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "data_table.pageSize",
+                "data_table.searchText || \"\"",
+                "(data_table.pageNo - 1) * data_table.pageSize"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Lessons_LessonsUtil.getSelectedRowClass",
+              "name": "LessonsUtil.getSelectedRowClass",
+              "collectionId": "Lessons_LessonsUtil",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "async function () {\n  var currentClass;\n  var allClasses = await appsmith.store.allClasses;\n  if (allClasses == null || allClasses == undefined) {\n    console.log(\"Fetching all classes\");\n    allClasses = await SelectClassesQuery.run();\n    storeValue(\"allClasses\", allClasses, false);\n  } else {\n    console.log(\"Using cached classees\");\n  }\n  currentClass = allClasses.filter(option => option.value == data_table.selectedRow.klass_id)[0];\n  if (currentClass == null || currentClass == undefined) {\n    currentClass = allClasses[0];\n  }\n  return currentClass;\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "Lessons",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false
+  },
+  "deleted": false,
+  "gitSyncId": "65dbe53b0d28a7464dd18987_65dbf2c30d28a7464dd18a48"
+}

@@ -1,0 +1,5 @@
+update counselees set 
+	next_lesson_id = {{this.params.nextLessonId}},
+	last_seen_at = {{this.params.lastSeenAt}},
+	updated_at = CURRENT_TIMESTAMP
+where id = {{data_table.triggeredRow.id}};

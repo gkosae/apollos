@@ -1,0 +1,20 @@
+{
+  "unpublishedCollection": {
+    "name": "CounseleesUtil",
+    "pageId": "Counselees",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [
+      {
+        "name": "defaults",
+        "value": "{\n  imageUrl: \"https://assets.appsmith.com/widgets/default.png\"\n}"
+      }
+    ],
+    "userPermissions": []
+  },
+  "id": "Counselees_CounseleesUtil",
+  "deleted": false,
+  "gitSyncId": "65dbe53b0d28a7464dd18987_65df672e08213366237495d5"
+}

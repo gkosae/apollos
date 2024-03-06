@@ -1,0 +1,7 @@
+UPDATE public."counselor_lesson_assignments" SET
+counselor_id = '{{UpdateForm.formData.Counselor}}',
+lesson_id = '{{UpdateForm.formData.Lesson}}',
+is_main_counselor_for_lesson = {{UpdateForm.formData.isMainCounselorForLesson}},
+updated_at = CURRENT_TIMESTAMP
+		
+WHERE "id" = {{data_table.selectedRow.id}};

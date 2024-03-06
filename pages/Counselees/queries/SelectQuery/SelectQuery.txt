@@ -1,0 +1,15 @@
+select
+	coun.*,
+	less.number as lesson_number,
+	less.name as lesson_name,
+	kls.code as klass_code
+from
+	counselees coun
+	inner join lessons less on less.id = coun.next_lesson_id
+	inner join klasses kls on less.klass_id = kls.id
+where 
+	coun.is_archived=false
+order by
+	coun.last_seen_at DESC, coun.joined_at DESC
+limit {{data_table.pageSize}}
+offset {{(data_table.pageNo - 1) * data_table.pageSize}};

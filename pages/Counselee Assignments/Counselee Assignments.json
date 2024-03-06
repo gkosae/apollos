@@ -1,0 +1,98 @@
+{
+  "unpublishedPage": {
+    "name": "Counselee Assignments",
+    "slug": "counselee-assignments",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 1174,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 860,
+          "containerStyle": "none",
+          "snapRows": 125,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 89,
+          "minHeight": 900,
+          "parentColumnSpace": 1,
+          "dynamicTriggerPathList": [],
+          "dynamicBindingPathList": [],
+          "leftColumn": 0
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Counselee Assignments_SelectCounselorsQuery",
+              "name": "SelectCounselorsQuery",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Counselee Assignments_SelectQuery",
+              "name": "SelectQuery",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "data_table.pageSize",
+                "(data_table.pageNo - 1) * data_table.pageSize"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Counselee Assignments_CCAUtils.getCounseleeLocation",
+              "name": "CCAUtils.getCounseleeLocation",
+              "collectionId": "Counselee Assignments_CCAUtils",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "async function () {\n  let value = NewCounseleeSelect.selectedOptionLabel || \"\";\n  if (value.trim().length < 1) {\n    return \"\";\n  }\n  let location = value.split(\" - \")[1] || \"\";\n  return location;\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Counselee Assignments_CCAUtils.getCounseleePictureUrl",
+              "name": "CCAUtils.getCounseleePictureUrl",
+              "collectionId": "Counselee Assignments_CCAUtils",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "async function () {\n  let value = NewCounseleeSelect.selectedOptionLabel || \"\";\n  if (value.trim().length < 1) {\n    return \"\";\n  }\n  let url = value.split(\" - \")[2] || \"\";\n  return url;\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Counselee Assignments_SelectCountQuery",
+              "name": "SelectCountQuery",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "Counselee Assignments",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false
+  },
+  "deleted": false,
+  "gitSyncId": "65dbe53b0d28a7464dd18987_65e71d7b3bd8b97f17843027"
+}

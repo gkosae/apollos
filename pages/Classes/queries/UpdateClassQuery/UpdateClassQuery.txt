@@ -1,0 +1,6 @@
+UPDATE public."klasses" SET
+		"name" = '{{update_form.fieldState.name.isVisible ? update_form.formData.name : update_form.sourceData.name}}',
+		"code" = '{{update_form.fieldState.code.isVisible ? update_form.formData.code : update_form.sourceData.code}}',
+    "number" = '{{update_form.fieldState.number.isVisible ? update_form.formData.number : update_form.sourceData.number}}',
+		"updated_at" = CURRENT_TIMESTAMP
+WHERE "id" = {{data_table.selectedRow.id}};

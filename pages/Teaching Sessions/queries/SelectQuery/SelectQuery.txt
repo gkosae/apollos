@@ -1,0 +1,27 @@
+select
+	tcs.id as id,
+	cle.id as counselee_id,
+	cle.first_name as counselee_first_name,
+	cle.last_name as counselee_last_name,
+	lsn.id as lesson_id,
+	kls.code as class_code,
+	lsn.number as lesson_number,
+	lsn.name as lesson_name,
+	cls.id as counselor_id,
+	cls.title as counselor_title,
+	cls.first_name as counselor_first_name,
+	cls.last_name as counselor_last_name,
+	tcs.taught_at
+from
+	teaching_sessions tcs
+inner join lessons lsn on
+	tcs.lesson_id = lsn.id
+inner join klasses kls on
+	lsn.klass_id = kls.id
+inner join counselors cls on
+	tcs.counselor_id = cls.id
+inner join counselees cle on
+	tcs.counselee_id = cle.id
+order by tcs.taught_at desc
+LIMIT {{data_table.pageSize}}
+OFFSET {{(data_table.pageNo - 1) * data_table.pageSize}};

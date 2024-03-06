@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "LessonsUtil",
+    "pageId": "Lessons",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Lessons_LessonsUtil",
+  "deleted": false,
+  "gitSyncId": "65dbe53b0d28a7464dd18987_65dc995cf43f712e8fa1b442"
+}

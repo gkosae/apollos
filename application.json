@@ -1,0 +1,70 @@
+{
+  "pages": [
+    {
+      "id": "Dashboard",
+      "isDefault": false
+    },
+    {
+      "id": "Counselees",
+      "isDefault": true
+    },
+    {
+      "id": "Teaching Sessions",
+      "isDefault": false
+    },
+    {
+      "id": "Counselee Assignments",
+      "isDefault": false
+    },
+    {
+      "id": "Lesson Assignments",
+      "isDefault": false
+    },
+    {
+      "id": "Counselors",
+      "isDefault": false
+    },
+    {
+      "id": "Lessons",
+      "isDefault": false
+    },
+    {
+      "id": "Classes",
+      "isDefault": false
+    }
+  ],
+  "viewMode": false,
+  "appIsExample": false,
+  "unreadCommentThreads": 0,
+  "unpublishedApplicationDetail": {
+    "appPositioning": {
+      "type": "FIXED"
+    },
+    "navigationSetting": {
+      "showNavbar": true,
+      "orientation": "top",
+      "navStyle": "inline",
+      "position": "static",
+      "itemStyle": "text",
+      "colorStyle": "light",
+      "logoAssetId": "",
+      "logoConfiguration": "logoAndApplicationTitle",
+      "showSignIn": true
+    }
+  },
+  "color": "#EAEDFB",
+  "icon": "book",
+  "unpublishedAppLayout": {
+    "type": "DESKTOP"
+  },
+  "publishedAppLayout": {
+    "type": "DESKTOP"
+  },
+  "unpublishedCustomJSLibs": [],
+  "publishedCustomJSLibs": [],
+  "evaluationVersion": 2,
+  "applicationVersion": 2,
+  "collapseInvisibleWidgets": true,
+  "isManualUpdate": false,
+  "deleted": false
+}

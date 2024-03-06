@@ -1,0 +1,17 @@
+select
+	lesson.*,
+	klass.code as klass_code,
+	klass.number as klass_number,
+	klass.name as klass_name
+from
+	lessons lesson
+inner join klasses klass on
+	lesson.klass_id = klass.id
+where
+	lesson.name ilike '%{{data_table.searchText || ""}}%' AND
+	lesson.is_archived = false
+order by
+	klass.number asc,
+	lesson.number asc
+limit {{data_table.pageSize}}
+offset {{(data_table.pageNo - 1) * data_table.pageSize}};

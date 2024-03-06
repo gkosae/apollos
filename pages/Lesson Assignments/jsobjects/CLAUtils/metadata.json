@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "CLAUtils",
+    "pageId": "Lesson Assignments",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Lesson Assignments_CLAUtils",
+  "deleted": false,
+  "gitSyncId": "65dbe53b0d28a7464dd18987_65e5cef03ff12e4fcd2ba722"
+}
